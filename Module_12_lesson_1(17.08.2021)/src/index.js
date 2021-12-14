@@ -1,5 +1,5 @@
 import "./sass/main.scss";
-import axios from 'axios';
+import axios from "axios";
 // import debounce from 'lodash.debounce';
 
 // debounce(test, 2000)
@@ -59,7 +59,6 @@ import axios from 'axios';
 // resource
 // params
 
-
 // Search cocktail by name
 // www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 
@@ -101,63 +100,65 @@ import axios from 'axios';
 // www.thecocktaildb.com/api/json/v1/1/list.php?a=list
 
 const refs = {
-  form: document.querySelector('#form'),
-  input: document.querySelector('#search'),
-  container: document.querySelector('.container'),
-  more: document.querySelector('#more')
-}
+  form: document.querySelector("#form"),
+  input: document.querySelector("#search"),
+  container: document.querySelector(".container"),
+  more: document.querySelector("#more"),
+};
 
 const hendlerSubmit = (e) => {
-  e.preventDefault()
+  e.preventDefault();
   // innerHTML
-  const value = refs.input.value
-  axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
-  .then(result => renderCollection(result.data.drinks))
-  .catch(err => console.log(err))
-    // fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
+  const value = refs.input.value;
+  axios
+    .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
+    .then((result) => renderCollection(result.data.drinks))
+    .catch((err) => console.log(err));
+  // fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
   // .then(response => response.json())
   // .then(result => renderCollection(result.drinks))
   // .catch(err => console.log(err))
-}
+};
 
-let currentPage = 1
+let currentPage = 1;
 
 const gitHanlerSubmit = (e) => {
-  e.preventDefault()
+  e.preventDefault();
   const value = refs.input.value;
-  axios.get(`https://api.github.com/search/users?q=${value}&client_id=67684cabc84f94f0938e&client_secret=782ea639550c1b5d986bdd8129813652ed04c92c&page=${currentPage}`)
-  .then(result => renderGitCollection(result.data.items))
-  .then(() => currentPage++)
-  .catch((err) => console.log(err))
-}
+  axios
+    .get(
+      `https://api.github.com/search/users?q=${value}&client_id=67684cabc84f94f0938e&client_secret=782ea639550c1b5d986bdd8129813652ed04c92c&page=${currentPage}`
+    )
+    .then((result) => renderGitCollection(result.data.items))
+    .then(() => currentPage++)
+    .catch((err) => console.log(err));
+};
 
-
-function createItem ({strDrinkThumb, strDrink}) {
+function createItem({ strDrinkThumb, strDrink }) {
   const article = `<article>
     <img src='${strDrinkThumb}' alt='${strDrink}'/>
     <p>${strDrink}</p>
   </article>
-`
-refs.container.insertAdjacentHTML('beforeend', article)
+`;
+  refs.container.insertAdjacentHTML("beforeend", article);
 }
 
-function createGitItem ({avatar_url, login}) {
+function createGitItem({ avatar_url, login }) {
   const article = `<article>
     <img src='${avatar_url}' alt='${login}'/>
     <p>${login}</p>
   </article>
-`
-refs.container.insertAdjacentHTML('beforeend', article)
+`;
+  refs.container.insertAdjacentHTML("beforeend", article);
 }
 
-function renderCollection (arr) {
-  arr.forEach(el => createItem(el))
+function renderCollection(arr) {
+  arr.forEach((el) => createItem(el));
 }
 
-function renderGitCollection (arr) {
-  arr.forEach(el => createGitItem(el))
+function renderGitCollection(arr) {
+  arr.forEach((el) => createGitItem(el));
 }
-
 
 // fetch(`https://www.thecoctaildb.com/api.php/json/v1/1/search.php?s=${value}`)
 //     .then(response => response.json())
@@ -165,16 +166,8 @@ function renderGitCollection (arr) {
 //     .catch(err => console.log(err));
 // }
 
-
-
-
-
-
-
-refs.form.addEventListener('submit', gitHanlerSubmit)
-refs.more.addEventListener('click', gitHanlerSubmit)
-
-
+refs.form.addEventListener("submit", gitHanlerSubmit);
+refs.more.addEventListener("click", gitHanlerSubmit);
 
 // function getIngridient(obj) {
 //     const ing = []

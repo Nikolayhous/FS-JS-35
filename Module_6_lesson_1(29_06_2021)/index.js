@@ -241,3 +241,23 @@ const scientists = [
 // }
 
 // console.log(findBorders("Switzerland", arr));
+
+// function letterCount(sup, sub) {
+//   if sub in sup:
+//      x = 0
+//      for i in sup:
+//         if sub in sup[sup.index(i):(int(len(sub))+int(sup.index(i)))]:
+//            x = x +1 
+//      return x 
+//   else:
+//      return 0
+// }
+
+// console.log(letterCount("Marry", "r")); // => 2
+// console.log(letterCount("Barny", "y")); // => 1
+// console.log(letterCount("", "z")); // => 0);
+
+// var text = "test".split("");
+// text.some(function (v, i, a) {
+//   return a.lastIndexOf(v) != i;
+// });

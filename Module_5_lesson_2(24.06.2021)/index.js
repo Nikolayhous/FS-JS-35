@@ -16,32 +16,32 @@
 //   );
 // };
 
-class Person {
-  //   firstName;
-  //   lastName;
-  //   age;
-  //   gender;
-  //   interest;
+// class Person {
+//   firstName;
+//   lastName;
+//   age;
+//   gender;
+//   interest;
 
-  constructor({ firstName, lastName, age, gender, interest }) {
-    // 1
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.gender = gender;
-    this.interest = interest;
-  }
+//   constructor({ firstName, lastName, age, gender, interest }) {
+//     // 1
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.gender = gender;
+//     this.interest = interest;
+//   }
 
-  greeting() {
-    console.log(`Привет я ${this.firstName} ${this.lastName}`);
-  }
+//   greeting() {
+//     console.log(`Привет я ${this.firstName} ${this.lastName}`);
+//   }
 
-  bio() {
-    console.log(
-      `Привет ${this.firstName} мне ${this.age} лет. Мне нравиться ${this.interest}`
-    );
-  }
-}
+//   bio() {
+//     console.log(
+//       `Привет ${this.firstName} мне ${this.age} лет. Мне нравиться ${this.interest}`
+//     );
+//   }
+// }
 
 // const user = new Person({
 //   firstName: "Роман",
@@ -400,3 +400,9 @@ class Person {
 
 // mango.name = "Mango the Fluffy";
 // console.log(mango.name); // Mango the Fluffy
+
+// function storeNames(...elem) {
+//   return [...elem];
+// }
+
+// console.log(storeNames("Tommy Shelby", "Ragnar Lodbrok", "Tom Hardy"));

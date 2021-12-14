@@ -45,8 +45,8 @@
 // npm i[package name]
 // yarn add [package name]
 
-import { printInfo, countTotal } from "./test.js";
-import q from "./test.js";
+// import { printInfo, countTotal } from "./test.js";
+// import q from "./test.js";
 
-console.log(printInfo(10));
-console.log(q);
+// console.log(printInfo(10));
+// console.log(q);
