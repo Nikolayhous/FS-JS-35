@@ -247,8 +247,8 @@ const scientists = [
 //      x = 0
 //      for i in sup:
 //         if sub in sup[sup.index(i):(int(len(sub))+int(sup.index(i)))]:
-//            x = x +1 
-//      return x 
+//            x = x +1
+//      return x
 //   else:
 //      return 0
 // }
@@ -261,3 +261,4 @@ const scientists = [
 // text.some(function (v, i, a) {
 //   return a.lastIndexOf(v) != i;
 // });
+
