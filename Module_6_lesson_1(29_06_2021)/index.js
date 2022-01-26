@@ -261,4 +261,4 @@ const scientists = [
 // text.some(function (v, i, a) {
 //   return a.lastIndexOf(v) != i;
 // });
-
+console.log(1 || (2 && 3) || 4);
