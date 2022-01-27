@@ -261,3 +261,9 @@ const scientists = [
 // text.some(function (v, i, a) {
 //   return a.lastIndexOf(v) != i;
 // });
+
+const trickyX = NaN;
+
+const test = (x) => x !== x;
+
+console.log(test(trickyX));
