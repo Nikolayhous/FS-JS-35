@@ -262,8 +262,4 @@ const scientists = [
 //   return a.lastIndexOf(v) != i;
 // });
 
-const trickyX = NaN;
 
-const test = (x) => x !== x;
-
-console.log(test(trickyX));
